@@ -1,0 +1,16 @@
+program SistemaEstoque;
+
+uses
+  Vcl.Forms,
+  unitPrincipal in 'unitPrincipal.pas' {formPrincipal},
+  unitCadProdutos in 'unitCadProdutos.pas' {formCadProduto};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TformPrincipal, formPrincipal);
+  Application.CreateForm(TformCadProduto, formCadProduto);
+  Application.Run;
+end.
